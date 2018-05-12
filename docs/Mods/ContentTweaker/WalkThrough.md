@@ -1,20 +1,19 @@
-# Walk-Through 
+# 实践
 
-## After Install
-First things first, before starting to create Blocks and such, it is suggested you run Minecraft at least once with
-ContentTweaker installed. This will allow ContentTweaker to create the resource folder that it needs.
+## 安装之后
+让我们开篇点题. 在开始创建方块和其他的之前, 你应该运行一次游戏使ContentTweaker的安装生效. 这将让ContentTweaker创建它需要的文件夹.
 
-## Important Folders
-ContentTweaker should create an extra folder in your minecraft directory: "resources". The resources folder will be where 
-all models, textures, and language files will be found. More on this folder will be explained later. The "scripts" 
-folder added by CraftTweaker is where you should put all ContentTweaker scripts, however ContentTweaker scripts should 
-begin with ```#loader contenttweaker``` at the top of the file.
+## 重要的文件夹
+在你经过上述操作后,ContentTweaker会在.minecraft文件夹内创建名为 `resources` 的资源文件夹. ContentTweaker将会从这个文件夹内读入所有资源.包括但不限于:
+- 所有的模型  
+- 材质  
+- 语言文件(lang)
 
-## First Block
-So for the best example of how ContentTweaker's content works, I'll be showing you one of the basic content pieces you 
-will be creating, a block. There is other content that can be created, but I won't be including them in this 
-walk-through. So first up, here is the script for the block I will using as example. Explanation of these methods can
-be found at the Blocks Page.
+之后将会对该文件夹中的更多内容进行详细的说明.  
+如果你需要在ZenScripts脚本中调用ContentTweaker,你需要在文件头加入 ```#loader contenttweaker``` .  
+
+## 第一个方块
+为了让你更了解ContentTweaker在CraftTweaker中是怎么工作的,我将把基本的内容展示. 我将使用ContentTweaker创建一个方块. 虽然还有很多东西可以展示,但我并不会这样做. 我将创建一个方块. 如果你想找到这些方法的意义和作用,你可以去翻阅wiki的其他页.  
 ```
 #loader contenttweaker
 
@@ -32,17 +31,12 @@ antiIceBlock.setBlockSoundType(<soundtype:snow>);
 antiIceBlock.setSlipperiness(0.3);
 antiIceBlock.register();
 ```
-This will create a Block that looks and acts slightly like Minecraft's Ice Block. You will want to put this script in
-the 'scripts' folder, following the same rules as in CraftTweaker's scripts. 
+这将创建一个方块,它的属性类似Minecraft的冰块.将这个脚本放入"scripts"文件夹,并遵守与CraftTweaker脚本相同的规则. 
 
-## Resources
-You will also need to take a .png file and put it into 'resources/contenttweaker/textures/blocks' (This folder should be 
-created for you, if you have run ContentTweaker already) The name of the file should match the name you put into 
-createBlock, which in this case is 'anti_ice'. If you are planning on using a default cube shape with the block, 
-ContentTweaker will generate the model jsons needed for it to function correctly.
-
-The other part for this will be the language file. ContentTweaker will have already generated the en_us.lang file you 
-will need to a line that will look like `tile.contenttweaker.<block_name>.name=Block name` or in our case with the AntiIce it 
-will be `tile.contenttweaker.anti_ice.name=Anti Ice`. With both lang and texture filed in, you should be able to load up the 
-game and see your block which will have a model, texture, and name.
-
+## 资源
+你需要一个文件后缀为 `png` 的图片文件作为刚才创建的这个方块的材质.将它放入 `resources/contenttweaker/textures/blocks` 文件夹. (如果你已经将ContentTweaker加载,这个文件夹应该已经创建了) png文件的名称应该要和你刚才输入的 `方块名称` 一致.
+例如:刚才写入的方块名称是 `anti_ice` ,那这个图片的文件名应是 `anti_ice.png`.  
+如果你打算在这个方块栈里不使用某些必要的数据, ContentTweaker将会使用默认的数据以保证正常运行.  
+[语言文件也属于资源](https://minecraft-zh.gamepedia.com/%E8%B5%84%E6%BA%90%E5%8C%85). 按照常理,ContentTweaker已经生成了en_US.lang文件.你需要在这个lang语言文件内使用 `tile.contenttweaker.<block_name>.name=Block name` 的格式来定义这个方块的displayName.例如: `tile.contenttweaker.anti_ice.name=Anti ice`  
+此外,en_US.lang是游戏在语言为English时使用的语言文件,如果你要详细了解,我认为你应该去查查wiki.  
+这两者都是示例,你应该还可以使用ContentTweaker加载你的模型,材质,以及定义displayName
