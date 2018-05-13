@@ -1,23 +1,22 @@
-# Sound Event Bracket Handler
+# 声音事件
 
-The SoundEvent Bracket Handler gives you access to the SoundEvents in the game.  
-Check [this](https://minecraft.gamepedia.com/Sounds.json) for a list of vanilla sound events!
+这个尖括号引用允许你引用一个在游戏中的声音事件  
+点[这里](https://minecraft.gamepedia.com/Sounds.json)查看原版的所有声音事件!  
 
 
-SoundTypes are referenced in the Sound Event Bracket handler this way:
+你需要这样引用声音事件:
 
-Vanilla
+原版:
 ```
 <soundevent:name>
 
 <soundevent:ambient.cave>
 ```
-
-Mod Added
+Mod:
 ```
 <soundevent:modID:name>
 
 <soundevent:minecraft:ambient.cave>
 ```
 
-If the soundType is found, this will return an [ISoundEventDefinition](/Mods/ContentTweaker/Vanilla/Types/Sound/ISoundEventDefinition) Object.  
+如果这个声音类型被找到,就会返回一个[ISoundEventDefinition](/Mods/ContentTweaker/Vanilla/Types/Sound/ISoundEventDefinition)对象
