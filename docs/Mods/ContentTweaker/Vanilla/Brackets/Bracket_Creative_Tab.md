@@ -1,15 +1,14 @@
-# Creative Tab Bracket Handler
+# 创造模式标签页
 
-The Creative Tab Bracket Handler gives you access to the Creative Tabs in the game.  
+这个尖括号引用允许你引用游戏中的创造模式标签页.
 
 
-Creative Tabs are referenced in the creative tabs handler this way:
+如果你想引用一个创造模式标签页,你应该这么做:
 
-Vanilla
 ```
 <creativetab:name>
 
 <creativetab:misc>
 ```
 
-If the creative tab is found, this will return a [creative tab](/Mods/ContentTweaker/Vanilla/Creatable_Content/Creative_Tab) Object.  
+如果这个创造模式标签页被CraftTweaker找到,他会返回一个[creative tab](/Mods/ContentTweaker/Vanilla/Creatable_Content/Creative_Tab)对象.
