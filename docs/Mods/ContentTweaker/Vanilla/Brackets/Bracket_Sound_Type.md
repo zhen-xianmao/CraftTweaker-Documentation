@@ -1,28 +1,28 @@
-# SoundType Bracket Handler
+# 声音类型
 
 
-The SoundType Bracket Handler gives you access to the SoundTypes in the game.
-Currently the only soundTypes supported are:
+这个尖括号引用允许你引用一个在游戏中的声音类型
+目前支持的声音类型有:
 
 <details>
-	<summary>Click to expand the type list</summary>
+	<summary>单击该处以查看目前支持的声音类型</summary>
 	<ul>
-		<li>Wood</li>
-		<li>Ground</li>
-		<li>Plant</li>
-		<li>Stone</li>
-		<li>Metal</li>
-		<li>Glass</li>
-		<li>Cloth</li>
-		<li>Sand</li>
-		<li>Snow</li>
-		<li>Ladder</li>
-		<li>Anvil</li>
-		<li>Slime</li>
+		<li>Wood(木头)</li>
+		<li>Ground(泥土)</li>
+		<li>Plant(杂草)</li>
+		<li>Stone(石头)</li>
+		<li>Metal(金属)</li>
+		<li>Glass(玻璃)</li>
+		<li>Cloth(皮革)</li>
+		<li>Sand(沙子)</li>
+		<li>Snow(雪)</li>
+		<li>Ladder(楼梯)</li>
+		<li>Anvil(铁砧)</li>
+		<li>Slime(史莱姆)</li>
 	</ul>
 </details>
 
-SoundTypes are referenced in the SoundType Bracket handler this way:
+若想引用一个声音类型,你需要这么做:
 
 ```
 <soundtype:name>
@@ -30,4 +30,4 @@ SoundTypes are referenced in the SoundType Bracket handler this way:
 <soundtype:wood>
 ```
 
-If the soundType is found, this will return an [ISoundTypeDefinition](/Mods/ContentTweaker/Vanilla/Types/Sound/ISoundTypeDefinition) Object.  
+如果你输入的声音类型能被CraftTweaker在游戏中找到,他将返回一个 [ISoundTypeDefinition](/Mods/ContentTweaker/Vanilla/Types/Sound/ISoundTypeDefinition) 对象
