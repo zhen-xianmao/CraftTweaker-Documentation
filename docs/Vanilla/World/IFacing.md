@@ -1,9 +1,9 @@
 # 方块朝向
 
-IFacing 接口允许你获取一个 [IBlockPos's](IBlockPos) 可能的方向。
+IFacing 接口允许你获取一个 [IBlockPos](IBlockPos) 的可能的方向。
 
 ## 导入包
-如果你遇到任何问题，可以尝试通过导入相关包来解决。  
+如果你遇到任何问题，都可以通过尝试通过导入相关包来解决。  
 `import crafttweaker.world.IFacing;`
 
 ## 枚举
